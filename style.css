@@ -1,0 +1,26 @@
+#conteiner {
+    display: flex;
+    max-width: 100vh;
+}
+#leftDiv{
+    max-width: 30%;
+}
+
+
+#rightDiv{
+    margin-left: 80px;
+    max-width: 60%;
+    
+    display: none;
+}
+li{
+    cursor: pointer;
+    font-size: larger;
+}
+.rightDivTxt{
+    margin-top: 20px;
+    font-size: larger;
+}
+img{
+    margin-top: 40%;
+}
