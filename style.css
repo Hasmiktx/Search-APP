@@ -1,26 +1,90 @@
+body{
+    background-color: aquamarine;
+}
 #conteiner {
     display: flex;
-    max-width: 100vh;
+    flex-flow: nowrap column;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#head{
+    display: flex;
+    flex-flow: nowrap column;
+}
+#pagination{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.divPage{
+ width: 15px;
+ height: 15px;
+ margin-top: 5%;
+ cursor: pointer;
+ text-align: center;
+ font-size: large;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+}
+#context{
+    display: flex;
+    flex-flow: nowrap row;
+    
+    max-width: 100%;
+    margin-left: 250px;
+    margin-top: 80px;
+    
 }
 #leftDiv{
-    max-width: 30%;
+    width: 300px;
+   margin-top: 50px;
 }
 
 
 #rightDiv{
-    margin-left: 80px;
-    max-width: 60%;
+    display:flex;
+    flex-flow: nowrap column;
+    width: 700px;
+    
+    /*border: 1px solid black;*/
+
     
     display: none;
+}
+.rightDivImg{
+max-width: 100%;
+
+cursor: pointer;
+}
+.rightDivTxt{
+max-width: 70%;
+margin-left: 10%;
+margin-top: 20px;
+font-size: larger;
 }
 li{
     cursor: pointer;
     font-size: larger;
+    margin-top: 10px;
 }
-.rightDivTxt{
-    margin-top: 20px;
-    font-size: larger;
+li:hover{
+    color: red;
 }
+
 img{
-    margin-top: 40%;
+    
+    max-width: 100%;
+    height: 400px;
+    margin: auto auto;
+    
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10%;
+}
+p{
+    margin-left: 80px;
+    font-size: 40px;
 }
