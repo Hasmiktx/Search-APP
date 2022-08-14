@@ -22,7 +22,15 @@ function drawSportlist(obj) {
     divPage.classList.add("divPage");
 
     divPage.innerHTML = i;
+
     divPage.addEventListener("click", () => drawPage(i));
+    divPage.addEventListener("click", (e) => {
+      const pageArr = document.querySelectorAll(".divPage");
+      for (let div of pageArr) {
+        div.style.backgroundColor = "rgb(4, 23, 40)";
+      }
+      e.target.style.backgroundColor = "grey";
+    });
     pagination.append(divPage);
   }
 
@@ -59,28 +67,36 @@ function headerOnclick(obj) {
   } else {
     img = "sports.jpg";
   }
+  const rightDivImg = document.createElement("div");
+  rightDivImg.classList.add("rightDivImg");
   const p = document.createElement("p");
   p.innerHTML = pName;
 
   const sportImg = document.createElement("img");
-  sportImg.addEventListener("click", () => idFunc());
-
   sportImg.src = img;
-
-  const rightDivImg = document.createElement("div");
-  rightDivImg.classList.add("rightDivImg");
+  let btn;
 
   const rightDivTxt = document.createElement("div");
   rightDivTxt.classList.add("rightDivTxt");
   rightDivImg.append(p);
   rightDivImg.append(sportImg);
+  if (btn) {
+    btn.style.display === "block";
+  } else {
+    btn = document.createElement("input");
+    btn.setAttribute("type", "button");
+    btn.value = "Click for info";
 
-  rightDivTxt.classList.add("rightDivTxt");
+    rightDivImg.append(btn);
+  }
+  btn.addEventListener("click", () => idFunc());
+
   rightDiv.append(rightDivImg);
 
   rightDiv.style.display = "block";
 
   async function idFunc() {
+    btn.style.display = "none";
     const res = await fetch(
       `https://sports.api.decathlon.com/sports/${sportId}`
     );

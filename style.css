@@ -1,5 +1,6 @@
 body{
-    background-color: aquamarine;
+    background-color: rgb(4, 23, 40);
+    
 }
 #conteiner {
     display: flex;
@@ -11,6 +12,16 @@ body{
 #head{
     display: flex;
     flex-flow: nowrap column;
+    color: whitesmoke;
+    text-align: center;
+
+}
+#headZone{
+    height: 400px;
+    background-image:url("./imgHead.jpg") ;
+    background-position: center 35%;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 #pagination{
     display: flex;
@@ -18,11 +29,14 @@ body{
     
 }
 .divPage{
- width: 15px;
- height: 15px;
+ width: 20px;
+ height: 20px;
+  border-radius: 50%;
+ border: 1px solid whitesmoke;
  margin-top: 5%;
  cursor: pointer;
  text-align: center;
+ color: whitesmoke;
  font-size: large;
  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  
@@ -32,13 +46,15 @@ body{
     flex-flow: nowrap row;
     
     max-width: 100%;
-    margin-left: 250px;
-    margin-top: 80px;
+    margin-left: 200px;
+    margin-top: 20px;
+    
     
 }
 #leftDiv{
     width: 300px;
    margin-top: 50px;
+   color:whitesmoke
 }
 
 
@@ -46,35 +62,38 @@ body{
     display:flex;
     flex-flow: nowrap column;
     width: 700px;
-    
-    /*border: 1px solid black;*/
-
-    
-    display: none;
+   display: none;
 }
-.rightDivImg{
-max-width: 100%;
 
-cursor: pointer;
+.rightDivImg{
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+   max-width: 100%;
+
+
 }
 .rightDivTxt{
 max-width: 70%;
-margin-left: 10%;
+margin-left: 15%;
 margin-top: 20px;
 font-size: larger;
+color: whitesmoke;
 }
 li{
     cursor: pointer;
     font-size: larger;
     margin-top: 10px;
 }
-li:hover{
-    color: red;
+li:hover {
+    color:gray;
 }
-
+.divPage:hover{
+    background-color: gray;
+}
 img{
     
-    max-width: 100%;
+    max-width: 600px;
     height: 400px;
     margin: auto auto;
     
@@ -85,6 +104,16 @@ h1{
     margin-top: 10%;
 }
 p{
-    margin-left: 80px;
+    margin-left: 50px;
     font-size: 40px;
+    color:whitesmoke
+}
+input{
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: gray;
+}
+input:hover{
+    color: black;
+    background-color: aliceblue;
 }
