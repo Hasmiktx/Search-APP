@@ -65,7 +65,7 @@ function headerOnclick(obj) {
   if (obj.relationships.images.data.length) {
     img = obj.relationships.images.data[0]["url"];
   } else {
-    img = "sports.jpg";
+    img = "./images/sports.jpg";
   }
   const rightDivImg = document.createElement("div");
   rightDivImg.classList.add("rightDivImg");
